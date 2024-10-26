@@ -1,0 +1,11 @@
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\bin\Debug\netstandard2.0\HAVMUN.deps.json
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\bin\Debug\netstandard2.0\HAVMUN.dll
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\bin\Debug\netstandard2.0\HAVMUN.pdb
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.csproj.AssemblyReference.cache
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.AssemblyInfoInputs.cache
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.AssemblyInfo.cs
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.csproj.CoreCompileInputs.cache
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.sourcelink.json
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.dll
+D:\Proyectos Personales\HAVMUN-Web\HAVMUN\obj\Debug\netstandard2.0\HAVMUN.pdb

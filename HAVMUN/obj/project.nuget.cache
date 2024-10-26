@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MOhbCNoD419zLZvr2Z3SXbwO/QjwJWCA4GQoNYK7Rt1kbVNcYkGJWZIJmL4eLtS7wgWQlhZmfzhG3WunJOfaqg==",
+  "success": true,
+  "projectFilePath": "D:\\Proyectos Personales\\HAVMUN-Web\\HAVMUN\\HAVMUN.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\USUARIO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
