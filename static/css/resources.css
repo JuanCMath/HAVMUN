@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 56.25rem; 
+    margin: 0;
+    padding: 1.25rem; 
+    margin-top: 3.75rem; 
+}
+
+.content h1 {
+    font-size: 1.75rem; 
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 1.25rem; 
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #003366;
+    margin-top: 2.5rem; 
+    margin-bottom: 0.9375rem; 
+    text-transform: uppercase;
+}
+
+.content h3 {
+    font-size: 1.375rem; 
+    font-weight: bold;
+    color: #003366;
+    margin-top: 2.1875rem; 
+    margin-bottom: 0.9375rem; 
+    text-transform: uppercase;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content li {
+    margin: 0.75rem 0; 
+    font-size: 1.125rem; 
+    position: relative;
+    padding-left: 1.5625rem; 
+}
+
+.content li a {
+    color: #003366;
+    text-decoration: none;
+    display: block;
+}
+
+.commissions li a {
+    border-bottom: 1px solid #66CCFF;
+    display: inline-block;
+}
+
+.content li a:hover {
+    color: #3399FF;
+    border-color: #3399FF;
+}
+
+.content li::before {
+    content: '•';
+    color: #66CCFF;
+    font-size: 1.5rem; 
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content p {
+    font-size: 1rem; 
+    line-height: 1.6;
+    margin-bottom: 0.9375rem; 
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem; 
+    padding: 1.25rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin: 0.9375rem 0; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card p.doc {
+    font-size: 1.125rem; 
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 0.625rem; 
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 1rem; 
+    margin-bottom: 0.625rem; 
+    line-height: 1.5;
+}
+
+.content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.25rem auto; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    border-radius: 0.625rem; 
+    border: 0.125rem solid #66CCFF; 
+}

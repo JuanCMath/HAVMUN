@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 75vw; 
+    margin: 0;
+    padding: 2vw; 
+    border-radius: 1vw; 
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2vw; 
+}
+
+.intro-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 4vw; 
+    text-align: left;
+}
+
+.intro-text p {
+    margin-bottom: 2vw; 
+    padding: 1vw; 
+    border-left: 0.3vw solid #66CCFF; 
+    border-radius: 0.5vw; 
+}
+
+.intro-text p:first-of-type {
+    margin-top: 0;
+}
+
+.intro-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.timeline-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw; 
+}
+
+.timeline {
+    max-width: 50%;
+    padding: 2vw; 
+    border-right: 0.2vw solid #66CCFF; 
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); 
+    text-align: left;
+}
+
+.timeline .year {
+    margin-bottom: 1.5vw;
+    padding-bottom: 1vw; 
+    border-bottom: 0.1vw solid #66CCFF; 
+}
+
+.timeline .year p {
+    font-size: 0.9rem;
+}
+
+.image-list {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw; 
+    padding: 2vw; 
+    text-align: center;
+}
+
+.image-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 2vw; 
+    border: 0.2vw solid #66CCFF; 
+}
