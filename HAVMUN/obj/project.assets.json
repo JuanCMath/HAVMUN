@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos Personales\\HAVMUN-Web\\HAVMUN\\HAVMUN.csproj",
+      "projectUniqueName": "D:\\Proyectos Personales\\HAVMUN\\HAVMUN\\HAVMUN.csproj",
       "projectName": "HAVMUN",
-      "projectPath": "D:\\Proyectos Personales\\HAVMUN-Web\\HAVMUN\\HAVMUN.csproj",
+      "projectPath": "D:\\Proyectos Personales\\HAVMUN\\HAVMUN\\HAVMUN.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos Personales\\HAVMUN-Web\\HAVMUN\\obj\\",
+      "outputPath": "D:\\Proyectos Personales\\HAVMUN\\HAVMUN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",

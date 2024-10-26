@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 import os
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -48,6 +48,25 @@ def contact_us():
 
 @app.route('/resources')
 def resources():
+    return render_template('resources.html')
+
+
+@app.route('/api/check_credentials', methods=["GET", "POST"])
+def process_form():
+    if request.method == "POST":
+        
+        country = request.form.get("country")
+        comision = request.form.get("commission")
+        psw = request.form.get("password")
+
+        if not country or not comision or not psw:
+            return render_template('login.html', message = "Please fill all fields")
+        
+        print(f"submitted: {country} {comision} {psw}")
+
+        #cambiar aqui despues de acceptar con JWT el usuario a que pagina se tiene que dirigir
+        return render_template('acceptance.html')
+
     return render_template('resources.html')
 
 
