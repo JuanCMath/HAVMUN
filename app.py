@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, session, request, redirect, url_for, render_template
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity, get_jwt
-
+import sqlite3 
 import os
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
