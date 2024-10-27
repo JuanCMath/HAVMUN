@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="../Multimedia/HAVMUN-transformed.png">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/HAVMUN-transformed.png') }}">
     <title>Havmun</title>
-    <link rel="stylesheet" href="contact.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../Css Style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../Css Style/generalstyle.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generalstyle.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900" rel="stylesheet">
 </head>
 <body>
@@ -38,7 +38,7 @@
     <p>Via Instagram</p>
     <a href="https://www.instagram.com/havmun?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw== " target="_blank">Havmun</a>
 
-    <img src="{{ url_for('static', filename='../Multimedia/contact interf.JPG') }}" alt="">
+    <img src="{{ url_for('static', filename='img/contact interf.JPG') }}" alt="">
     </div>
 
 </body>
