@@ -52,6 +52,25 @@ def contact_us():
 def resources():
     return render_template('resources.html')
 
+@app.route('/comision1')
+def comision1():
+    return render_template('comision1.html')
+
+@app.route('/comision2')
+def comision2():
+    return render_template('comision2.html')
+
+@app.route('/comision3')
+def comision3():
+    return render_template('comision3.html')
+
+@app.route('/comision4')
+def comision4():
+    return render_template('comision4.html')
+
+@app.route('/comision5')
+def comision5():
+    return render_template('comision5.html')
 
 @app.route('/api/check_credentials', methods=["GET", "POST"])
 def process_form():
