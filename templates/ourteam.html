@@ -2,29 +2,29 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="../Multimedia/HAVMUN-transformed.png">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/HAVMUN-transformed.png') }}">
     <title>Havmun</title>
-    <link rel="stylesheet" type="text/css" href="../Css Style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../Css Style/generalstyle.css">
-    <link rel="stylesheet" type="text/css" href="ourteam.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ourteam.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generalstyle.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900" rel="stylesheet">
 </head>
 <body>
     <input type="checkbox" id="toggle-nav" class="toggle-checkbox">
     <label for="toggle-nav" class="toggle-btn">
-        <img src="../Multimedia/HAVMUN-transformed.png" alt="Menú">
+        <img src="{{ url_for('static', filename='img/HAVMUN-transformed.png') }}" alt="Menú">
     </label>
     <nav class="navegation-bar">
         <ul> 
-            <li><a href="../1. Main/index.html">INICIO</a></li>
-            <li><a href="../2. Edition/edition.html">EDICIÓN XXVIII</a></li>
-            <li><a href="ourteam.html">NUESTRO EQUIPO</a></li>
-            <li><a href="../4. History of Model/history.html">HISTORIA DEL MODELO</a></li>
-            <li><a href="../5. Academic Design/academicdesign.html">DISEÑO ACADÉMICO</a></li>
-            <li><a href="../6. How to take part/takepart.html">CÓMO PARTICIPAR</a></li>
-            <li><a href="../8. Votation System/login.html">SISTEMA DE VOTACIÓN</a></li>
-            <li><a href="../9. Contact/contact.html">CONTÁCTANOS</a></li>
-            <li><a href="../10. Resources/resources.html">RECURSOS ACADÉMICOS</a></li>
+            <li><a href="{{ url_for('home') }}">INICIO</a></li>
+            <li><a href="{{ url_for('edition') }}">EDICIÓN XXVIII</a></li>
+            <li><a href="{{ url_for('our_team') }}">NUESTRO EQUIPO</a></li>
+            <li><a href="{{ url_for('history') }}">HISTORIA DEL MODELO</a></li>
+            <li><a href="{{ url_for('academic_design') }}">DISEÑO ACADÉMICO</a></li>
+            <li><a href="{{ url_for('take_part') }}">CÓMO PARTICIPAR</a></li>
+            <li><a href="{{ url_for('votation_system') }}">SISTEMA DE VOTACIÓN</a></li>
+            <li><a href="{{ url_for('contact_us') }}">CONTÁCTANOS</a></li>
+            <li><a href="{{ url_for('resources') }}">RECURSOS ACADÉMICOS</a></li>
         </ul>
     </nav>
     
@@ -79,9 +79,9 @@
             </div>
     
             <div class="team-images">
-                <img src="../Multimedia/equipo1.JPG" alt="Comité organizador">
-                <img src="../Multimedia/equipo2.JPG" alt="Comité organizador">
-                <img src="../Multimedia/equipo3.JPG" alt="Comité organizador">
+                <img src="{{ url_for('static', filename='img/equipo1.JPG') }}" alt="Comité organizador">
+                <img src="{{ url_for('static', filename='img/equipo2.jpg') }}" alt="Comité organizador">
+                <img src="{{ url_for('static', filename='img/equipo3.jpg') }}" alt="Comité organizador">
             </div>
         </div>
     </div>
