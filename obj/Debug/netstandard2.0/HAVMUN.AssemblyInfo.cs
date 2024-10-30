@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HAVMUN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e54f95aeedc22417712e63ceef002cacd5be48dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+006e3d831bc1be3b98a47e849ba49f4d79704e81")]
 [assembly: System.Reflection.AssemblyProductAttribute("HAVMUN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HAVMUN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

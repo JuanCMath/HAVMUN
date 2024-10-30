@@ -1,95 +1,63 @@
-from flask import Flask, jsonify, session, request, redirect, url_for, render_template
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity, get_jwt
-import sqlite3 
-import os
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_jwt_extended import JWTManager
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.backends import default_backend
+import os, config, models
+from cryptography.hazmat.primitives.asymmetric import rsa
+from routes import bp
+
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 template_dir = os.path.join(script_dir, 'templates')
 
 if not os.path.exists(template_dir):
     print("Error: El directorio de templates no existe.")
-else:
-    print("Contenido del directorio de templates:")
-    for item in os.listdir(template_dir):
-        print(item)
 
-app = Flask(__name__, template_folder=template_dir)
+def create_app():
+    app = Flask(__name__, template_folder=template_dir)
+    
+    app.config.from_object(config.Config)
+    app.register_blueprint(bp)
+    models.db.init_app(app)
+    models.jwt.init_app(app)
 
-# Rutas
-@app.route('/')
-def home():
-    return render_template('index.html')
+    with app.app_context():
+        models.db.create_all()
 
-@app.route('/edition')
-def edition():
-    return render_template('edition.html')
+    return app
 
-@app.route('/our Team')
-def our_team():
-    return render_template('ourteam.html')
+# Generar claves RSA
+private_key = rsa.generate_private_key(
+    public_exponent=65537,
+    key_size=2048,
+    backend=default_backend()
+)
 
-@app.route('/history')
-def history():
-    return render_template('history.html')
+public_key = private_key.public_key()
 
-@app.route('/academic_design')
-def academic_design():
-    return render_template('academicdesign.html')
+# Guardar la clave privada encriptada
+encrypted_private_key = private_key.private_bytes(
+    encoding=serialization.Encoding.PEM,
+    format=serialization.PrivateFormat.PKCS8,
+    encryption_algorithm=serialization.NoEncryption()
+)
 
-@app.route('/take_part')
-def take_part():
-    return render_template('takepart.html')
+# Guardar la clave pública
+public_pem = public_key.public_bytes(
+    encoding=serialization.Encoding.PEM,
+    format=serialization.PublicFormat.SubjectPublicKeyInfo
+)
 
-@app.route('/votation_system')
-def votation_system():
-    return render_template('login.html')
+# Guardar las claves en archivos seguros
+with open("private_key.pem", "wb") as f:
+    f.write(encrypted_private_key)
 
-@app.route('/contact_us')
-def contact_us():
-    return render_template('contact.html')
-
-@app.route('/resources')
-def resources():
-    return render_template('resources.html')
-
-@app.route('/comision1')
-def comision1():
-    return render_template('comision1.html')
-
-@app.route('/comision2')
-def comision2():
-    return render_template('comision2.html')
-
-@app.route('/comision3')
-def comision3():
-    return render_template('comision3.html')
-
-@app.route('/comision4')
-def comision4():
-    return render_template('comision4.html')
-
-@app.route('/comision5')
-def comision5():
-    return render_template('comision5.html')
-
-@app.route('/api/check_credentials', methods=["GET", "POST"])
-def process_form():
-    if request.method == "POST":
-        
-        country = request.form.get("country")
-        comision = request.form.get("commission")
-        psw = request.form.get("password")
-
-        if not country or not comision or not psw:
-            return render_template('login.html', message = "Please fill all fields")
-        
-        print(f"submitted: {country} {comision} {psw}")
-
-        #cambiar aqui despues de acceptar con JWT el usuario a que pagina se tiene que dirigir
-        return render_template('acceptance.html')
-
-    return render_template('resources.html')
+with open("public_key.pem", "wb") as f:
+    f.write(public_pem)
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    app = create_app()
+    with app.app_context():
+        app.run(debug=True, port=4000)
