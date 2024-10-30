@@ -72,8 +72,6 @@ def comision4():
 def comision5():
     return render_template('comision5.html')
 
-
-
 @app.route('/api/check_credentials', methods=["GET", "POST"])
 def process_form():
     if request.method == "POST":
